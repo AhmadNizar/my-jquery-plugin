@@ -22,9 +22,11 @@
       var email = $("input[name='invalid-email']")
       email.keyup(function() {
         if (!email.emailValidator()) {
+          console.log('masuk sini');
           $(email).addClass("error").removeClass("success")
           $(email).next().fadeIn()
         } else {
+          console.log('masuk sukses');
           $(email).addClass("success").removeClass("error")
           $(email).next().fadeOut()
         }
